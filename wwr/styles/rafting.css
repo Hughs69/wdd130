@@ -3,7 +3,6 @@
     --secondary-color: #ffb703;
     --accent1-color: #023047;
     --accent2-color: #8ecae6;
-
     --heading-font: Georgia, "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -22,7 +21,7 @@ body {
     background-color: #ffffff;
 }
 
-/* Main page width */
+/* Page Width */
 header,
 main,
 footer {
@@ -33,12 +32,14 @@ footer {
 /* Header */
 header {
     background-color: var(--primary-color);
+    color: var(--accent2-color);
     padding: 10px;
 }
 
 /* Logo */
 header > img {
     width: 150px;
+    height: auto;
     display: block;
     margin-bottom: 10px;
 }
@@ -63,7 +64,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
 }
 
 /* Headings */
@@ -95,7 +97,7 @@ p {
     line-height: 1.5;
 }
 
-/* Sections and articles */
+/* Sections and Articles */
 section,
 article {
     margin: 16px;
@@ -108,14 +110,14 @@ article {
     margin-top: 20px;
 }
 
-/* Hero main image */
+/* Hero Image */
 .hero > img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Article overlay */
+/* Article Overlay */
 .hero article {
     position: absolute;
     left: 30px;
@@ -126,21 +128,22 @@ article {
     padding: 15px;
 }
 
-/* Article paragraph */
+/* Article Text */
 .hero article p {
     color: white;
 }
 
-/* Happy client image */
+/* Happy Client Image */
 .hero article img {
     float: right;
     width: 125px;
+    height: auto;
     margin: 0 0 10px 15px;
     border: 3px solid white;
     box-shadow: 0 0 10px #000;
 }
 
-/* History section */
+/* History Section */
 section {
     margin-top: 25px;
 }
@@ -151,9 +154,10 @@ footer {
     border-top: 1px solid var(--accent1-color);
     padding: 15px 0;
     text-align: center;
+    background-color: var(--accent2-color);
 }
 
-/* Social media */
+/* Social Media */
 .socialmedia {
     display: flex;
     justify-content: flex-end;
