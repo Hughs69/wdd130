@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #087e8b;
+    --secondary-color: #ffb703;
+    --accent1-color: #023047;
+    --accent2-color: #8ecae6;
+
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #ffffff;
+}
+
+/* Main page width */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+/* Logo */
+header > img {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    margin: 16px;
+    padding: 8px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    margin: 16px;
+    padding: 8px;
+    line-height: 1.5;
+}
+
+/* Sections and articles */
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Hero main image */
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Article overlay */
+.hero article {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background-color: rgba(2, 48, 71, 0.8);
+    color: white;
+    padding: 15px;
+}
+
+/* Article paragraph */
+.hero article p {
+    color: white;
+}
+
+/* Happy client image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin: 0 0 10px 15px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #000;
+}
+
+/* History section */
+section {
+    margin-top: 25px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    border-top: 1px solid var(--accent1-color);
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Social media */
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
