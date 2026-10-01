@@ -1,19 +1,11 @@
 :root {
-    --primary-color: #087e8b;
-    --secondary-color: #ffb703;
-    --accent1-color: #023047;
-    --accent2-color: #8ecae6;
-    --white-color: #ffffff;
-    --black-color: #000000;
-    --overlay-color: #023047d9;
-    --history-light-color: #e8f7fa;
-    --adventure-background: #dff3f5;
-
-    --heading-font: Georgia, "Times New Roman", serif;
+    --primary-color: #055a05;
+    --secondary-color: #ffffff;
+    --accent1-color: #264653;
+    --accent2-color: #838383;
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
-
-/* CSS RESET */
 
 * {
     margin: 0;
@@ -21,247 +13,168 @@
     box-sizing: border-box;
 }
 
-/* BODY */
-
 body {
     font-family: var(--body-font);
-    color: var(--black-color);
-    background-color: var(--white-color);
-    max-width: 1200px;
+    color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+    width: 840px;
     margin: 0 auto;
 }
 
-/* HEADER */
-
 header {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 15px 30px;
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
 }
 
 header img {
-    width: 140px;
+    width: 80px;
     height: auto;
 }
 
-/* NAVIGATION */
-
-nav {
+header nav {
     display: flex;
     justify-content: flex-end;
-    gap: 25px;
+    gap: 20px;
 }
 
-nav a {
-    color: var(--white-color);
+header nav a {
     text-decoration: none;
+    color: var(--accent1-color);
     font-weight: bold;
+    padding: 6px 10px;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
+header nav a:hover {
+    color: var(--primary-color);
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
-
-/* HEADINGS */
 
 h1,
-h2,
-h3 {
-    font-family: var(--heading-font);
-}
-
 h2 {
-    color: var(--accent1-color);
-    margin-bottom: 15px;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
-
-/* PARAGRAPHS */
-
-p {
-    line-height: 1.6;
-}
-
-/* HERO */
 
 .hero {
     position: relative;
-    margin-top: 20px;
 }
 
 .hero > img {
     display: block;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;
 }
 
-/* HERO TITLE */
-
-h1 {
+.hero h1 {
     position: absolute;
-    top: 25px;
-    left: 0;
-    right: 0;
-
-    padding: 15px;
-
+    top: 20px;
+    width: 100%;
+    padding: 16px;
     text-align: center;
-
+    opacity: 0.85;
     background-color: var(--accent1-color);
-    color: var(--white-color);
-
-    opacity: 0.9;
+    color: #fff;
 }
-
-/* HERO ARTICLE */
 
 .hero article {
     position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 12px;
-
-    background-color: var(--overlay-color);
-    color: var(--white-color);
-
-    padding: 18px 20px;
-}
-
-.hero article h2 {
-    color: var(--white-color);
-    margin-bottom: 10px;
-}
-
-.hero article p {
-    color: var(--white-color);
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 4px;
 }
 
 .hero article img {
     float: right;
-
-    width: 150px;
-    height: 100px;
-
-    object-fit: cover;
-
-    margin-left: 20px;
-
-    border: 3px solid var(--white-color);
+    width: 125px;
+    height: auto;
+    margin-left: 15px;
 }
 
-/* HISTORY */
+.hero article p {
+    margin: 0;
+    padding: 0;
+}
+
+/* HISTORY SECTION */
 
 .history {
-    display: grid;
-
-    grid-template-columns: 1fr 250px 1fr;
-
-    gap: 25px;
-
-    align-items: start;
-
-    padding: 50px 30px;
-
-    background: linear-gradient(90deg,
-            var(--white-color) 0%,
-            var(--history-light-color) 50%,
-            var(--white-color) 100%);
-
-    background-size: 200% 100%;
-
-    animation: historyBackground 8s ease-in-out infinite alternate;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 30px 0;
 }
 
-/* HISTORY TEXT */
-
 .history-text {
-    padding: 45px 15px 15px;
+    flex: 1;
+    padding: 10px;
 }
 
 .history-text p {
     margin: 0;
-    line-height: 1.5;
+    padding: 0;
+    line-height: 1.6;
 }
-
-/* LEFT HISTORY TEXT */
-
-.left-history {
-    text-align: right;
-}
-
-/* RIGHT HISTORY TEXT */
-
-.right-history {
-    text-align: left;
-}
-
-/* CENTER HISTORY */
 
 .history-center {
+    flex: 1;
     text-align: center;
 }
 
 .history-center h2 {
-    color: var(--accent1-color);
     margin-bottom: 15px;
 }
 
 .history-center img {
-    width: 100%;
-    max-width: 250px;
-
-    height: 180px;
-
-    object-fit: cover;
-
-    border-radius: 8px;
+    width: 220px;
+    height: auto;
+    border-radius: 4px;
 }
 
-/* ADVENTURES */
+/* ADVENTURES SECTION */
 
 .adventures {
-    padding: 40px 30px;
-
-    text-align: center;
-
-    background-color: var(--adventure-background);
+    margin: 30px 0;
 }
 
 .adventures h2 {
-    color: var(--accent1-color);
-    margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* ADVENTURE GALLERY */
-
 .adventure-gallery {
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .adventure-gallery figure {
-    margin: 0;
+    flex: 1;
+    text-align: center;
 }
 
 .adventure-gallery img {
     width: 100%;
-    height: 140px;
-
+    height: 120px;
     object-fit: cover;
-
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .adventure-gallery figcaption {
-    margin-top: 8px;
-
+    font-size: 0.85rem;
+    margin-top: 6px;
     font-weight: bold;
-
     color: var(--accent1-color);
 }
 
@@ -269,27 +182,24 @@ h1 {
 
 footer {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
-    padding: 20px 30px;
-
     background-color: var(--accent1-color);
-
-    color: var(--white-color);
+    color: #f0f0f0;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
 }
 
 footer p {
     margin: 0;
+    padding: 0;
 }
-
-/* SOCIAL MEDIA */
 
 .socialmedia {
     display: flex;
-
-    gap: 15px;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .socialmedia a {
@@ -297,22 +207,6 @@ footer p {
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-/* HISTORY BACKGROUND ANIMATION */
-
-@keyframes historyBackground {
-    from {
-        background-position: left center;
-    }
-
-    to {
-        background-position: right center;
-    }
+    width: 40px;
+    height: 40px;
 }
