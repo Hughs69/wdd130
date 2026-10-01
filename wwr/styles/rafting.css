@@ -6,17 +6,22 @@
     --white-color: #ffffff;
     --black-color: #000000;
     --overlay-color: #023047d9;
+    --history-light-color: #e8f7fa;
+    --adventure-background: #dff3f5;
 
-    ``` --heading-font: Georgia, "Times New Roman", serif;
+    --heading-font: Georgia, "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
-    ```
 }
+
+/* CSS RESET */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* BODY */
 
 body {
     font-family: var(--body-font);
@@ -25,6 +30,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* HEADER */
 
 header {
     display: grid;
@@ -38,6 +45,8 @@ header img {
     width: 140px;
     height: auto;
 }
+
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -55,6 +64,8 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
+/* HEADINGS */
+
 h1,
 h2,
 h3 {
@@ -62,13 +73,17 @@ h3 {
 }
 
 h2 {
-    color: var(--primary-color);
+    color: var(--accent1-color);
     margin-bottom: 15px;
 }
+
+/* PARAGRAPHS */
 
 p {
     line-height: 1.6;
 }
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -82,25 +97,35 @@ p {
     object-fit: cover;
 }
 
+/* HERO TITLE */
+
 h1 {
     position: absolute;
     top: 25px;
     left: 0;
     right: 0;
+
     padding: 15px;
+
     text-align: center;
+
     background-color: var(--accent1-color);
     color: var(--white-color);
+
     opacity: 0.9;
 }
+
+/* HERO ARTICLE */
 
 .hero article {
     position: absolute;
     left: 30px;
     right: 30px;
     bottom: 12px;
+
     background-color: var(--overlay-color);
     color: var(--white-color);
+
     padding: 18px 20px;
 }
 
@@ -115,55 +140,107 @@ h1 {
 
 .hero article img {
     float: right;
+
     width: 150px;
     height: 100px;
+
     object-fit: cover;
+
     margin-left: 20px;
+
     border: 3px solid var(--white-color);
 }
 
+/* HISTORY */
+
 .history {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-columns: 1fr 250px 1fr;
+
     gap: 25px;
-    align-items: center;
+
+    align-items: start;
+
     padding: 50px 30px;
+
     background: linear-gradient(90deg,
-            #ffffff 0%,
-            #e8f7fa 50%,
-            #ffffff 100%);
+            var(--white-color) 0%,
+            var(--history-light-color) 50%,
+            var(--white-color) 100%);
+
+    background-size: 200% 100%;
+
     animation: historyBackground 8s ease-in-out infinite alternate;
 }
 
+/* HISTORY TEXT */
+
 .history-text {
-    padding: 15px;
+    padding: 45px 15px 15px;
 }
+
+.history-text p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* LEFT HISTORY TEXT */
+
+.left-history {
+    text-align: right;
+}
+
+/* RIGHT HISTORY TEXT */
+
+.right-history {
+    text-align: left;
+}
+
+/* CENTER HISTORY */
 
 .history-center {
     text-align: center;
 }
 
+.history-center h2 {
+    color: var(--accent1-color);
+    margin-bottom: 15px;
+}
+
 .history-center img {
     width: 100%;
     max-width: 250px;
+
     height: 180px;
+
     object-fit: cover;
+
     border-radius: 8px;
 }
 
+/* ADVENTURES */
+
 .adventures {
     padding: 40px 30px;
+
     text-align: center;
-    background-color: #dff3f5;
+
+    background-color: var(--adventure-background);
 }
 
 .adventures h2 {
+    color: var(--accent1-color);
     margin-bottom: 25px;
 }
 
+/* ADVENTURE GALLERY */
+
 .adventure-gallery {
     display: grid;
+
     grid-template-columns: repeat(5, 1fr);
+
     gap: 15px;
 }
 
@@ -174,22 +251,32 @@ h1 {
 .adventure-gallery img {
     width: 100%;
     height: 140px;
+
     object-fit: cover;
+
     border-radius: 6px;
 }
 
 .adventure-gallery figcaption {
     margin-top: 8px;
+
     font-weight: bold;
+
     color: var(--accent1-color);
 }
 
+/* FOOTER */
+
 footer {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 30px;
+
     background-color: var(--accent1-color);
+
     color: var(--white-color);
 }
 
@@ -197,8 +284,11 @@ footer p {
     margin: 0;
 }
 
+/* SOCIAL MEDIA */
+
 .socialmedia {
     display: flex;
+
     gap: 15px;
 }
 
@@ -209,17 +299,20 @@ footer p {
 .socialmedia img {
     width: 30px;
     height: 30px;
+
+    object-fit: contain;
+
     display: block;
 }
+
+/* HISTORY BACKGROUND ANIMATION */
 
 @keyframes historyBackground {
     from {
         background-position: left center;
     }
 
-    ``` to {
+    to {
         background-position: right center;
     }
-
-    ```
 }
