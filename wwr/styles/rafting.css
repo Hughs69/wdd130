@@ -12,101 +12,53 @@
     ```
 }
 
-/* =========================
-CSS RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-BODY
-========================= */
-
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--black-color);
     background-color: var(--white-color);
-}
-
-/* =========================
-PAGE WIDTH
-========================= */
-
-header,
-main,
-footer {
-    width: 840px;
+    max-width: 1200px;
     margin: 0 auto;
 }
-
-/* =========================
-HEADER
-========================= */
 
 header {
     display: grid;
     grid-template-columns: 180px 1fr;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 10px;
+    padding: 15px 30px;
+    background-color: var(--accent1-color);
 }
 
-header > img {
-    width: 150px;
+header img {
+    width: 140px;
     height: auto;
-    display: block;
 }
-
-/* =========================
-NAVIGATION
-========================= */
 
 nav {
-    margin: 16px;
-    padding: 8px;
-}
-
-header nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
 }
 
 nav a {
     color: var(--white-color);
     text-decoration: none;
-    padding: 8px 15px;
     font-weight: bold;
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--accent1-color);
+    color: var(--secondary-color);
 }
-
-/* =========================
-HEADINGS
-========================= */
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
-}
-
-h1 {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    color: var(--white-color);
-    opacity: 0.9;
 }
 
 h2 {
@@ -114,19 +66,9 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* =========================
-PARAGRAPHS
-========================= */
-
 p {
-    margin: 16px;
-    padding: 8px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
-
-/* =========================
-HERO
-========================= */
 
 .hero {
     position: relative;
@@ -138,6 +80,18 @@ HERO
     width: 100%;
     height: 300px;
     object-fit: cover;
+}
+
+h1 {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: var(--white-color);
+    opacity: 0.9;
 }
 
 .hero article {
@@ -152,189 +106,120 @@ HERO
 
 .hero article h2 {
     color: var(--white-color);
+    margin-bottom: 10px;
 }
 
 .hero article p {
     color: var(--white-color);
-    margin: 0;
-    padding: 5px;
 }
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 150px;
     height: 100px;
     object-fit: cover;
-    margin: 0 0 10px 15px;
+    margin-left: 20px;
     border: 3px solid var(--white-color);
-    box-shadow: 0 0 10px var(--black-color);
 }
-
-/* =========================
-HISTORY
-========================= */
 
 .history {
-    position: relative;
-    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 250px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    margin: 35px 16px;
-    padding: 15px;
-    align-items: start;
-
-    ``` background: linear-gradient(120deg,
-            #ffffff,
-            #e8f7fa,
-            #ffffff,
-            #dff3f5);
-
-    background-size: 300% 300%;
-    animation: historyBackground 10s ease infinite;
-    ```
+    align-items: center;
+    padding: 50px 30px;
+    background: linear-gradient(90deg,
+            #ffffff 0%,
+            #e8f7fa 50%,
+            #ffffff 100%);
+    animation: historyBackground 8s ease-in-out infinite alternate;
 }
-
-/* HISTORY BACKGROUND ANIMATION */
-
-@keyframes historyBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    ``` 50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
-    ```
-}
-
-/* LEFT AND RIGHT HISTORY TEXT */
 
 .history-text {
-    padding-top: 45px;
+    padding: 15px;
 }
-
-.history-text p {
-    margin: 0;
-    padding: 5px;
-    line-height: 1.5;
-}
-
-/* LEFT TEXT */
-
-.left-history {
-    text-align: right;
-}
-
-/* RIGHT TEXT */
-
-.right-history {
-    text-align: left;
-}
-
-/* CENTER HISTORY */
 
 .history-center {
     text-align: center;
 }
 
-.history-center h2 {
-    margin: 0 0 15px 0;
-    text-align: center;
-}
-
 .history-center img {
-    width: 250px;
-    height: 170px;
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    border-radius: 8px;
 }
-
-/* =========================
-ADVENTURES
-========================= */
 
 .adventures {
-    margin: 25px 16px;
-    padding: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #dff3f5;
 }
 
 .adventures h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-
-/* FIVE IMAGES IN ONE ROW */
 
 .adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
 }
-
-/* EACH ADVENTURE */
 
 .adventure-gallery figure {
-    width: 20%;
     margin: 0;
-    text-align: center;
 }
-
-/* ADVENTURE IMAGES */
 
 .adventure-gallery img {
     width: 100%;
-    height: 120px;
+    height: 140px;
     object-fit: cover;
-    display: block;
+    border-radius: 6px;
 }
-
-/* CAPTIONS */
 
 .adventure-gallery figcaption {
     margin-top: 8px;
-    font-size: 13px;
+    font-weight: bold;
     color: var(--accent1-color);
 }
 
-/* =========================
-FOOTER
-========================= */
-
 footer {
-    margin-top: 30px;
-    border-top: 1px solid var(--accent1-color);
-    padding: 15px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--accent1-color);
+    color: var(--white-color);
 }
 
-/* =========================
-SOCIAL MEDIA
-========================= */
+footer p {
+    margin: 0;
+}
 
 .socialmedia {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .socialmedia a {
     text-decoration: none;
 }
 
-.socialmedia a:hover {
-    background-color: var(--accent2-color);
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    display: block;
 }
 
-.socialmedia img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+@keyframes historyBackground {
+    from {
+        background-position: left center;
+    }
+
+    ``` to {
+        background-position: right center;
+    }
+
+    ```
 }
